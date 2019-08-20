@@ -12,11 +12,11 @@ public class Primefactor {
 		{
 			while (N % i == 0) 
 			{
-				System.out.println(+i);
+				System.out.println(i);
 				N = N / i;
 			}
 		}
 		if (N > 2)
-			System.out.println(+N);
+			System.out.println(N);
 	}
 }
