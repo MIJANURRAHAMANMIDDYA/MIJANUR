@@ -10,7 +10,7 @@ public class Username {
 		System.out.println("enter your name:");
 		String userName=sc.next();
 		System.out.println("Hello " +userName+", How are you?");
-		System.out.println("****************");
+		
 		
 	}
 
