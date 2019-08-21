@@ -30,7 +30,8 @@ public class Tictoe {
     }
 
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) 
+	{
 		
 		char arr[][]= {{'0','0','0'},{'0','0','0'},{'0','0','0'}};		
 		System.out.println("array elements are:");
