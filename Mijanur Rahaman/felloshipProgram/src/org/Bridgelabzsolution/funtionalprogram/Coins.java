@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class Coins {
 
-	private static Object next;
+
 
 	public static void main(String[] args)
 	

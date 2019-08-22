@@ -29,7 +29,36 @@ public class Tictoe {
 		return true;
     }
 
-	
+	static boolean iswin(char arr[][])
+	{
+		if ((arr[0][0]=='x'&& arr[0][1]=='x' && arr[0][2]=='x')
+				   ||(arr[1][0]=='x'&& arr[1][1]=='x' && arr[1][2]=='x')
+				   ||(arr[2][0]=='x'&& arr[2][1]=='x' && arr[2][2]=='x')
+				   ||(arr[0][0]=='x'&& arr[1][0]=='x' && arr[2][0]=='x')
+				   ||(arr[0][1]=='x'&& arr[1][1]=='x' && arr[2][1]=='x')
+				   ||(arr[0][2]=='x'&& arr[1][2]=='x' && arr[2][2]=='x')
+				   ||(arr[0][0]=='x'&& arr[1][1]=='x' && arr[2][2]=='x')
+				   ||(arr[0][2]=='x'&& arr[1][1]=='x' && arr[2][0]=='x'))
+		{          
+				   System.out.println("player1 win!!!");
+				   return true;
+		}
+		else if ((arr[0][0]=='*'&& arr[0][1]=='*' && arr[0][2]=='*')
+				   ||(arr[1][0]=='*'&& arr[1][1]=='*' && arr[1][2]=='*')
+				   ||(arr[2][0]=='*'&& arr[2][1]=='*' && arr[2][2]=='*')
+				   ||(arr[0][0]=='*'&& arr[1][0]=='*' && arr[2][0]=='*')
+				   ||(arr[0][1]=='*'&& arr[1][1]=='*' && arr[2][1]=='*')
+				   ||(arr[0][2]=='*'&& arr[1][2]=='*' && arr[2][2]=='*')
+				   ||(arr[0][0]=='*'&& arr[1][1]=='*' && arr[2][2]=='*')
+				   ||(arr[0][2]=='*'&& arr[1][1]=='*' && arr[2][0]=='*'))
+		{
+			System.out.println("player2 win!!!");
+			return true;
+		}
+		
+		
+		return false;
+	}
 	public static void main(String[] args) 
 	{
 		
@@ -44,24 +73,42 @@ public class Tictoe {
 		System.out.println("enter row and col:");
 		int row=sc.nextInt();
 		int col=sc.nextInt();
+		if(row>2||col>2) {
+			System.out.println("invalid row and col");}
 		arr[row][col]='x';
 		display(arr);
+		
 		if(isfull(arr)==true)
+			break;
+		
+		if(iswin(arr)==true)
 			break;
 		
 		System.out.println("player2 turn");
 		System.out.println("eneter row and col:");
 		int r1=sc.nextInt();
 		int c1=sc.nextInt();
+		if(r1>2||c1>2) {
+		System.out.println("invalid row and col");}
 		arr[r1][c1]='*';
-		display(arr);
-		 if(isfull(arr)==true)
-				break;
-		System.out.println(isfull(arr));
-
+	     System.out.println();
+		display(arr); 
+           if(iswin(arr)==true)
+			break;
 		}
-		System.out.println();
-		display(arr);
-}
-}
+		 if(isfull(arr)==true)
+			 
+		    {
+			  if(iswin(arr)==false)
+			{
+			
+			System.out.println("match draw");
+			
+			}
+				
+		}	
+      }
+   }
+	
+
 		
