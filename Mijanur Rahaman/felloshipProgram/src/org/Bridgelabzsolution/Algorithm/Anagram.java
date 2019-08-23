@@ -16,6 +16,7 @@ public class Anagram {
 		{
 		char arr1[]=s.toCharArray();
 		Arrays.sort(arr1);
+		
 		System.out.println(Arrays.toString(arr1));
 		char arr2[]=r.toCharArray();
 		Arrays.sort(arr2);

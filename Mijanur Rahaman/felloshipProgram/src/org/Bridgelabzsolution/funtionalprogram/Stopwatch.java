@@ -1,17 +1,24 @@
 package org.Bridgelabzsolution.funtionalprogram;
 
-public class Stopwatch {
-	public final long start;
-	 public Stopwatch() {
-	        start = System.currentTimeMillis();
-	    } 
-	 public double elapsedTime() {
-	        long now = System.currentTimeMillis();
-	        return (now - start) / 1000.0;
-	    }
+import java.util.Scanner;
 
-	public static void main(String[] args) {
+public class Stopwatch {
+	
+	  
+	public static void main(String[] args) 
+	{
+		System.out.println("enter s for staring:");
+		Scanner sc=new Scanner(System.in);
+		String p=sc.next();
+		System.out.println("enter q for staring:");
+		String r=sc.next();
+		final long start=0;
+		
+		
+		
+		
 		
 }
 
 }
+ 
